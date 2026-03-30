@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paddy Filder's Tea Party | 早稲田大学公認国際交流サークル Paddy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap');
+
+        :root {
+            --sky-1: #effaff;
+            --sky-2: #d9f1ff;
+            --sky-3: #9ad9ff;
+            --sky-4: #58bef7;
+            --sky-5: #2297ea;
+            --sky-6: #146eb3;
+            --navy: #0b2e4f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #15314b;
+            background:
+                radial-gradient(circle at top left, rgba(154, 217, 255, 0.35), transparent 30%),
+                radial-gradient(circle at top right, rgba(88, 190, 247, 0.20), transparent 24%),
+                linear-gradient(180deg, #f7fcff 0%, #eef8ff 42%, #ffffff 100%);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.74);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,0.7);
+            box-shadow: 0 10px 30px rgba(33, 104, 161, 0.08);
+        }
+
+        .logo-badge {
+            box-shadow: 0 14px 35px rgba(19, 88, 142, 0.18);
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(135deg, rgba(8, 43, 79, 0.72), rgba(34, 151, 234, 0.55)),
+                url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg::before,
+        .hero-bg::after {
+            content: "";
+            position: absolute;
+            border-radius: 9999px;
+            background: rgba(255,255,255,0.10);
+            filter: blur(1px);
+        }
+
+        .hero-bg::before {
+            width: 320px;
+            height: 320px;
+            top: -100px;
+            right: -60px;
+        }
+
+        .hero-bg::after {
+            width: 260px;
+            height: 260px;
+            bottom: -100px;
+            left: -60px;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+        }
+
+        .floating-card {
+            background: rgba(255,255,255,0.90);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 18px 45px rgba(49, 129, 189, 0.14);
+        }
+
+        .section-card {
+            background: rgba(255,255,255,0.84);
+            border: 1px solid rgba(170, 220, 255, 0.45);
+            box-shadow: 0 14px 34px rgba(44, 124, 183, 0.10);
+        }
+
+        .blue-card {
+            background: linear-gradient(135deg, #2aa5f1 0%, #1277c5 100%);
+            box-shadow: 0 18px 42px rgba(24, 111, 176, 0.28);
+        }
+
+        .soft-pill {
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer-gradient {
+            background: linear-gradient(180deg, #123b64 0%, #0a2843 100%);
+        }
+
+        .shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shine::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.18) 50%, transparent 75%);
+            transform: translateX(-120%);
+            transition: transform 0.8s ease;
+        }
+
+        .shine:hover::after {
+            transform: translateX(120%);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-nav fixed top-0 inset-x-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="data:image/png;base64,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" alt="Paddy icon" class="w-11 h-11 rounded-full object-cover bg-white logo-badge" />
+                <div>
+                    <p class="text-[11px] tracking-[0.28em] text-sky-700 font-extrabold">WASEDA OFFICIAL CIRCLE</p>
+                    <p class="text-lg font-extrabold text-slate-900">Paddy</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-700">
+                <a href="#about" class="hover:text-sky-600 transition">About</a>
+                <a href="#features" class="hover:text-sky-600 transition">Features</a>
+                <a href="#events" class="hover:text-sky-600 transition">Events</a>
+                <a href="#join" class="hover:text-sky-600 transition">Join</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg min-h-[92vh] flex items-center text-white px-4 pt-24">
+        <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center relative z-10">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-white/15 border border-white/20 rounded-full px-4 py-2 text-sm font-bold tracking-wide mb-6">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-300"></span>
+                    早稲田大学公認 国際交流サークル
+                </div>
+                <h1 class="text-4xl md:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight mb-6">
+                    Paddy Filder's Tea Party
+                </h1>
+                <p class="text-lg md:text-2xl leading-relaxed text-sky-50/95 max-w-2xl mb-8">
+                    世界中に友達を。<br class="hidden md:block" />
+                    Paddyは、留学生と日本人学生が自然につながり、日常の会話から特別なイベントまで一緒に楽しめる国際交流コミュニティです。
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-10">
+                    <a href="#join" class="shine bg-white text-sky-700 px-8 py-4 rounded-full font-extrabold shadow-2xl transition hover:-translate-y-0.5">参加する</a>
+                    <a href="#about" class="shine soft-pill text-white px-8 py-4 rounded-full font-bold transition hover:bg-white/20">活動を見る</a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4 max-w-2xl">
+                    <div class="hero-card rounded-2xl p-5">
+                        <p class="text-white/75 text-sm font-bold mb-2">定期活動</p>
+                        <p class="text-xl font-extrabold">毎週 火曜・金曜 17:00 - 18:30</p>
+                    </div>
+                    <div class="hero-card rounded-2xl p-5">
+                        <p class="text-white/75 text-sm font-bold mb-2">活動場所</p>
+                        <p class="text-xl font-extrabold">早稲田大学 学生会館</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-card rounded-[2rem] p-6 md:p-8 text-slate-800">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="data:image/png;base64,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" alt="Paddy icon" class="w-16 h-16 rounded-full object-cover bg-white p-1 logo-badge" />
+                    <div>
+                        <p class="text-xs font-extrabold tracking-[0.25em] text-sky-600">INTERNATIONAL CIRCLE</p>
+                        <p class="text-2xl font-extrabold text-slate-900">Paddy</p>
+                    </div>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">日常から英語を使える</p>
+                            <p class="text-sm leading-relaxed text-slate-600">会話ベースの活動が中心だから、授業では得にくい自然な英語のやりとりを楽しめます。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-earth-asia"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">国際交流らしい出会いがある</p>
+                            <p class="text-sm leading-relaxed text-slate-600">留学生と日本人学生がフラットにつながれるので、新しい価値観や文化に触れやすい環境です。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-sparkles"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">初参加でも入りやすい</p>
+                            <p class="text-sm leading-relaxed text-slate-600">1人参加でもなじみやすく、国際サークルが初めての人にもおすすめです。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 text-center">
+                    <div class="rounded-2xl bg-sky-50 py-4 px-2">
+                        <p class="text-xs text-slate-500 font-bold">所属人数</p>
+                        <p class="text-2xl font-extrabold text-sky-700 mt-1">254</p>
+                    </div>
+                    <div class="rounded-2xl bg-sky-50 py-4 px-2">
+                        <p class="text-xs text-slate-500 font-bold">入会費</p>
+                        <p class="text-2xl font-extrabold text-sky-700 mt-1">¥3,000</p>
+                    </div>
+                    <div class="rounded-2xl bg-sky-50 py-4 px-2">
+                        <p class="text-xs text-slate-500 font-bold">継続費</p>
+                        <p class="text-2xl font-extrabold text-sky-700 mt-1">約¥1,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative -mt-12 px-4 max-w-6xl mx-auto z-20">
+        <div class="grid md:grid-cols-3 gap-5">
+            <div class="floating-card rounded-[1.75rem] p-6 border border-white/80">
+                <p class="text-slate-500 text-sm font-bold">雰囲気</p>
+                <p class="text-2xl font-extrabold text-slate-900 mt-2">Friendly & Global</p>
+                <p class="text-sm leading-relaxed text-slate-600 mt-3">堅すぎず、でも安心感がある。Paddyは、気軽さと国際性のバランスが魅力です。</p>
+            </div>
+            <div class="floating-card rounded-[1.75rem] p-6 border border-white/80">
+                <p class="text-slate-500 text-sm font-bold">スタイル</p>
+                <p class="text-2xl font-extrabold text-slate-900 mt-2">Campus × International</p>
+                <p class="text-sm leading-relaxed text-slate-600 mt-3">大学生活の延長線上で、自然にグローバルなつながりが生まれるデザインにしています。</p>
+            </div>
+            <div class="floating-card rounded-[1.75rem] p-6 border border-white/80">
+                <p class="text-slate-500 text-sm font-bold">参加しやすさ</p>
+                <p class="text-2xl font-extrabold text-slate-900 mt-2">Beginner Friendly</p>
+                <p class="text-sm leading-relaxed text-slate-600 mt-3">英語に自信がなくても大丈夫。交流を楽しみたい気持ちがあれば十分です。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <p class="text-sky-600 font-extrabold tracking-[0.25em] text-sm mb-3">ABOUT PADDY</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-5">Paddyでできること</h2>
+            <p class="text-slate-600 leading-relaxed text-lg">日常の英会話からイベントでの交流まで、Paddyでは自然なコミュニケーションを通じて友達の輪を広げられます。</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+            <div class="blue-card text-white rounded-[2rem] p-8 md:p-10">
+                <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold mb-5">Usual Activity</h3>
+                <p class="leading-relaxed text-white/90 text-lg mb-6">
+                    火曜・金曜の放課後は、英語を中心に交流する定期活動。Paddyならではの魅力は、気張りすぎずに話せることです。授業のような堅さではなく、友達をつくる延長で自然に言葉が出てきます。
+                </p>
+                <div class="soft-pill rounded-2xl p-4 font-bold text-white/95 inline-block">
+                    毎週 火曜・金曜 17:00〜18:30
+                </div>
+            </div>
+
+            <div class="section-card rounded-[2rem] p-8 md:p-10">
+                <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-6 text-2xl">
+                    <i class="fas fa-calendar-star"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold mb-5 text-slate-900">Events</h3>
+                <p class="leading-relaxed text-slate-600 text-lg mb-6">
+                    定期活動に加えて、季節イベントや小規模の交流会、月ごとの特別企画も開催。国際サークルらしいワクワク感を、日常の活動だけで終わらせません。
+                </p>
+                <div class="grid sm:grid-cols-2 gap-4 text-sm font-bold text-slate-700">
+                    <div class="rounded-2xl bg-sky-50 p-4 flex items-center gap-3"><i class="fas fa-check text-sky-500"></i> 季節ごとのパーティー</div>
+                    <div class="rounded-2xl bg-sky-50 p-4 flex items-center gap-3"><i class="fas fa-check text-sky-500"></i> 週末のアウトドア企画</div>
+                    <div class="rounded-2xl bg-sky-50 p-4 flex items-center gap-3"><i class="fas fa-check text-sky-500"></i> 留学生との観光企画</div>
+                    <div class="rounded-2xl bg-sky-50 p-4 flex items-center gap-3"><i class="fas fa-check text-sky-500"></i> Monthly Event</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="px-4 pb-24">
+        <div class="max-w-6xl mx-auto rounded-[2.5rem] p-8 md:p-12 bg-gradient-to-br from-sky-50 via-white to-cyan-50 border border-sky-100 shadow-[0_20px_60px_rgba(66,143,199,0.10)]">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <p class="text-sky-600 font-extrabold tracking-[0.25em] text-sm mb-3">WHY PADDY</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-5">Paddyの特徴</h2>
+                <p class="text-slate-600 text-lg leading-relaxed">入りやすさ、安心感、国際感。この3つがそろっているから、初めてでも自然に楽しめます。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+                <div class="section-card rounded-[1.75rem] p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-xl font-extrabold mb-3 text-slate-900">英語が苦手でもOK</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">完璧に話せなくても大丈夫。交流しながら少しずつ慣れていけます。</p>
+                </div>
+                <div class="section-card rounded-[1.75rem] p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-user-group"></i></div>
+                    <h3 class="text-xl font-extrabold mb-3 text-slate-900">1人参加が多い</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">1人で来る人も多く、最初の一歩を踏み出しやすい雰囲気があります。</p>
+                </div>
+                <div class="section-card rounded-[1.75rem] p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-school"></i></div>
+                    <h3 class="text-xl font-extrabold mb-3 text-slate-900">他大学歓迎</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">早稲田だけで閉じない、広がりのある交流が魅力です。</p>
+                </div>
+                <div class="section-card rounded-[1.75rem] p-6">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-shield-check"></i></div>
+                    <h3 class="text-xl font-extrabold mb-3 text-slate-900">公認サークルで安心</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">大学公認だからこそ、参加のハードルが低く安心して関われます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="px-4 pb-24">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center">
+            <div>
+                <p class="text-sky-600 font-extrabold tracking-[0.25em] text-sm mb-3">LIFE IN PADDY</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-5">国際サークルらしい毎日を</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Paddyの魅力は、イベントの数だけではなく、普段の会話そのものが刺激になること。英語を話す、文化を知る、友達ができる。その全部が自然につながっています。
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-mug-hot"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">カジュアルな交流</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">堅苦しい雰囲気ではなく、リラックスした会話から仲良くなれます。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-camera"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">思い出に残るイベント</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">写真に残したくなるような、おしゃれで楽しい時間をつくれます。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0"><i class="fas fa-language"></i></div>
+                        <div>
+                            <p class="font-extrabold text-slate-900">言語を超えたつながり</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">英語だけでなく、文化や価値観の違いを楽しむこと自体がPaddyの価値です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+                <div class="section-card rounded-[1.9rem] p-6 sm:translate-y-10">
+                    <p class="text-sm font-extrabold text-sky-600 mb-3">Small Event</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">Weekend Hangout</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">少人数での交流企画。落ち着いて話したい人や、初参加の人にもぴったりです。</p>
+                </div>
+                <div class="blue-card rounded-[1.9rem] p-6 text-white">
+                    <p class="text-sm font-extrabold text-white/80 mb-3">Monthly Event</p>
+                    <h3 class="text-2xl font-extrabold mb-3">Seasonal Party</h3>
+                    <p class="text-white/90 text-sm leading-relaxed">月ごとの特別イベントで、Paddyならではの国際的な盛り上がりを楽しめます。</p>
+                </div>
+                <div class="blue-card rounded-[1.9rem] p-6 text-white">
+                    <p class="text-sm font-extrabold text-white/80 mb-3">Global Moment</p>
+                    <h3 class="text-2xl font-extrabold mb-3">Culture Exchange</h3>
+                    <p class="text-white/90 text-sm leading-relaxed">文化を知ること自体がコンテンツになるのが、国際サークルのいちばんの面白さです。</p>
+                </div>
+                <div class="section-card rounded-[1.9rem] p-6 sm:translate-y-10">
+                    <p class="text-sm font-extrabold text-sky-600 mb-3">Community</p>
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-3">New Friends</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">日本人も留学生も関係なく、大学生活を少し広げてくれる出会いがあります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="join" class="footer-gradient text-white px-4 pt-20 pb-14">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="flex justify-center mb-6">
+                <img src="data:image/png;base64,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" alt="Paddy icon" class="w-20 h-20 rounded-full bg-white p-1 object-cover logo-badge" />
+            </div>
+            <p class="text-sky-200 font-extrabold tracking-[0.25em] text-sm mb-3">JOIN PADDY</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">まずは気軽に参加してみよう</h2>
+            <p class="text-sky-100/80 text-lg max-w-2xl mx-auto leading-relaxed mb-10">見学でも、初参加でも大丈夫。Paddyは、国際交流に少しでも興味があれば入りやすいコミュニティです。</p>
+
+            <div class="flex gap-4 justify-center flex-wrap mb-10">
+                <a href="#" class="shine bg-white text-sky-700 px-8 py-4 rounded-full font-extrabold shadow-xl transition hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fab fa-line"></i>
+                    LINEで参加
+                </a>
+                <a href="#" class="shine bg-sky-500 hover:bg-sky-400 text-white px-8 py-4 rounded-full font-extrabold shadow-xl transition hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+
+            <p class="text-sky-100/70 text-sm">© 2026 Paddy - Waseda University Official Circle</p>
+        </div>
+    </footer>
+
+</body>
+</html>
