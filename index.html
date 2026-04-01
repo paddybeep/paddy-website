@@ -122,12 +122,16 @@
 
     @media (max-width: 767px) {
       #langToggle {
-        top: 12px;
-        left: 50%;
-        transform: translateX(-50%);
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        transform: none;
         padding: 8px 14px;
         font-size: 13px;
       }
+    }
+    }
     }
   </style>
 </head>
@@ -246,7 +250,7 @@
       <div class="floating-card rounded-[1.75rem] p-6 border border-white/80">
         <p class="text-slate-500 text-sm font-bold" data-i18n="easy_label">Easy to Join</p>
         <p class="text-2xl font-extrabold text-slate-900 mt-2">Beginner Friendly</p>
-        <p class="text-sm leading-relaxed text-slate-600 mt-3" data-i18n="easy_desc">You do not need to be confident in English. If you want to meet new people, that is enough.</p>
+        <p class="text-sm leading-relaxed text-slate-600 mt-3" data-i18n="easy_desc">You do not need to be confident in English. If you want to enjoy交流, that is enough.</p>
       </div>
     </div>
   </section>
@@ -255,7 +259,7 @@
     <div class="text-center max-w-3xl mx-auto mb-14">
       <p class="text-sky-600 font-extrabold tracking-[0.25em] text-sm mb-3">ABOUT PADDY</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-5" data-i18n="about_title">What You Can Do in Paddy</h2>
-      <p class="text-slate-600 leading-relaxed text-lg" data-i18n="about_desc">From everyday English conversation to special events, Paddy helps you expand your circle of friends through natural communication.</p>
+      <p class="text-slate-600 leading-relaxed text-lg" data-i18n="about_desc">From everyday English conversation to event-based交流, Paddy helps you expand your circle of friends through natural communication.</p>
     </div>
 
     <div class="grid lg:grid-cols-2 gap-8 items-stretch">
@@ -292,7 +296,7 @@
         <div class="section-card rounded-[1.75rem] p-6">
           <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-heart"></i></div>
           <h3 class="text-xl font-extrabold mb-3 text-slate-900" data-i18n="why1_title">No need to be fluent in English</h3>
-          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="why1_desc">You do not need perfect English. You can get comfortable little by little.</p>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="why1_desc">You do not need perfect English. You can get comfortable little by little while enjoying the交流.</p>
         </div>
         <div class="section-card rounded-[1.75rem] p-6">
           <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-user-group"></i></div>
@@ -302,7 +306,7 @@
         <div class="section-card rounded-[1.75rem] p-6">
           <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-school"></i></div>
           <h3 class="text-xl font-extrabold mb-3 text-slate-900" data-i18n="why3_title">Students from other universities are welcome</h3>
-          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="why3_desc">Paddy is not limited to Waseda, which makes our activities broader and more exciting.</p>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="why3_desc">Paddy is not limited to Waseda, which makes the交流 broader and more exciting.</p>
         </div>
         <div class="section-card rounded-[1.75rem] p-6">
           <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 text-xl"><i class="fas fa-shield-alt"></i></div>
@@ -423,7 +427,7 @@
       nav_join: { ja: '参加方法', en: 'Join' },
       hero_badge: { ja: '早稲田大学公認 国際交流サークル', en: 'Waseda University Official International Circle' },
       hero_copy1: { ja: '世界中に友達を。', en: 'Make friends from all over the world.' },
-      hero_copy2: { ja: 'Paddyは、留学生と日本人学生が自然につながり、日常の会話から特別なイベントまで一緒に楽しめる国際交流コミュニティです。', en: 'Paddy is an international community where Japanese and international students can connect naturally and enjoy everything from casual conversations to memorable events together.' },
+      hero_copy2: { ja: 'Paddyは、早稲田大学のサークルの中で最も留学生が多く在籍しており、そんな留学生たちと日常の会話から特別なイベントまで一緒に楽しめる国際交流コミュニティです。', en: 'Paddy is an international community where Japanese and international students can connect naturally and enjoy everything from casual conversations to memorable events together.' },
       join_btn: { ja: '参加する', en: 'Join Us' },
       explore_btn: { ja: '活動を見る', en: 'Explore Activities' },
       regular_activity_label: { ja: '定期活動', en: 'Regular Activities' },
@@ -451,11 +455,11 @@
       about_desc: { ja: '日常の英会話からイベントでの交流まで、Paddyでは自然なコミュニケーションを通じて友達の輪を広げられます。', en: 'From everyday conversations to special events, Paddy helps you build real friendships through natural communication.' },
       usual_desc: { ja: '火曜・金曜の放課後は、英語を中心に交流する定期活動。Paddyならではの魅力は、気張りすぎずに話せることです。授業のような堅さではなく、友達をつくる延長で自然に言葉が出てきます。', en: 'On Tuesday and Friday evenings, Paddy hosts regular sessions built around English conversation. What makes them special is how natural they feel — less like a class, and more like meeting new friends.' },
       usual_time: { ja: '毎週 火曜・金曜 17:00〜18:30', en: 'Every Tuesday & Friday 17:00–18:30' },
-      events_desc: { ja: '定期活動に加えて、季節イベントや小規模の交流会、月ごとの特別企画も開催。国際サークルらしいワクワク感を、日常の活動だけで終わらせません。', en: 'Alongside our regular activities, Paddy also hosts seasonal parties, small gatherings, and monthly special events — so the fun goes well beyond weekly meetings.' },
+      events_desc: { ja: '定期活動に加えて、小規模のイベント、月ごとの特別企画も開催。国際サークルらしいワクワク感を、日常の活動だけで終わらせません。', en: 'Alongside our regular activities, Paddy also hosts small events, and monthly special events — so the fun goes well beyond weekly meetings.' },
       event_item1: { ja: '季節ごとのパーティー', en: 'Seasonal parties' },
-      event_item2: { ja: '週末のアウトドア企画', en: 'Weekend outdoor activities' },
+      event_item2: { ja: 'ご飯会', en: 'Dinner party' },
       event_item3: { ja: '留学生との観光企画', en: 'Sightseeing with international students' },
-      event_item4: { ja: 'Monthly Event', en: 'Monthly event' },
+      event_item4: { ja: '月イベント', en: 'Monthly event' },
       why_title: { ja: 'Paddyの特徴', en: 'Why Paddy' },
       why_desc: { ja: '入りやすさ、安心感、国際感。この3つがそろっているから、初めてでも自然に楽しめます。', en: 'Paddy is easy to join, welcoming, and genuinely international — which is exactly why even first-timers feel comfortable here.' },
       why1_title: { ja: '英語が苦手でもOK', en: 'No need to be fluent in English' },
